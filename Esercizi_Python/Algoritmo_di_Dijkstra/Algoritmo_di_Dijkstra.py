@@ -3,9 +3,9 @@ grafo = {'a':{'b':1,'c':4},'b':{'c':1, 'd':3},'c':{'d':1},'d':{}}
 def dijkstra(grafo,start):
 
     nodes = grafo  
-    absoluteD = {}      #Contiene il numero minimo di costo per raggiungere un certo nodo 
+    absoluteD = {}     
     predecessors = {}     
-    iDistance = 100000      #Inizialmente tutti i nodi hano una distanza infinita dal nodo 0
+    iDistance = 100000      #Inizialmente tutti i nodi hano una distanza a noi sconosciuta dal nodo 0
     
 
 
