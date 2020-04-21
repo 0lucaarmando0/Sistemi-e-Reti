@@ -21,12 +21,12 @@ def dijkstra(grafo,start):
             elif absoluteD[node] < absoluteD[minNode]:      
                 minNode = node
 
-        for childNode, weight in grafo[minNode].items():                # Faccio un ciclo per ogni elmento di ogni blocco della dello shot_path
+        for childNode, weight in grafo[minNode].items():                
             if weight + absoluteD[minNode] < absoluteD[childNode]:      # controllo per vedere se il peso + l'etichetta nel mio nodo sono minori di quelli sucessivi(figli) 
                 absoluteD[childNode] = weight + absoluteD[minNode]      # se vero, rietichetto il nodo figlio con un valore minore
-                predecessors[childNode] = minNode                       # contengo la predecessori di ogni nodo
+                predecessors[childNode] = minNode                      
         
-        nodes.pop(minNode)    # mi permette di uscire dal while
+        nodes.pop(minNode)    #mi permette di uscire dal while
     
     print("Label min: ")
     print(absoluteD)
